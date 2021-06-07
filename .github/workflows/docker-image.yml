@@ -15,6 +15,6 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: Print new build number
-      run: echo "Build number is $BUILD_NUMBER"
+      run: echo ${{ github.run_number }}
     - name: Build the Docker image
       run: docker build . --file Dockerfile --tag sachinpal064/grafana:v1
